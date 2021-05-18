@@ -42,12 +42,15 @@ def out_check():
 
 now = datetime.now()    #현재 시간 정의
 print("지금은", now.year, "년", now.month, "월", now.day, "일", now.hour, "시", now.minute, "분입니다. \n")    #현재 시간 출력
-# in_check()
-if now.hour < 11:   #오전 11시 이전일 때
-    in_check()      #출석 확인 함수 호출
 
-elif now.hour in range(11, 18):     #오전 11시부터 오후 6시 사이일 때
-    print("출석 시간이 아닙니다.\n")
+def alarm():
+    if now.hour < 11:   #오전 11시 이전일 때
+        in_check()      #출석 확인 함수 호출
 
-elif now.hour >= 18:    #오후 6시 이후일 때
-    out_check()         #퇴실 확인 함수 호출
+    elif now.hour in range(11, 18):     #오전 11시부터 오후 6시 사이일 때
+        print("출석 시간이 아닙니다.\n")
+
+    elif now.hour >= 18:    #오후 6시 이후일 때
+        out_check()         #퇴실 확인 함수 호출
+
+alarm()
