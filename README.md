@@ -1,1 +1,4 @@
-# self_AttendanceAlarm
+# AttendanceAlarm
+09:00 - 11:00 출석 알림
+11:00 - 18:00 출석 불가능
+18:00 이후 퇴실 알림
